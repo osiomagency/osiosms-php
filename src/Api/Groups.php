@@ -2,7 +2,7 @@
 
 namespace OsioSms\Api;
 
-class Groups extends BaseApi
+class Groups extends Base
 {
     public function createGroup($name)
     {
