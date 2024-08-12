@@ -2,7 +2,7 @@
 
 namespace OsioSms\Api;
 
-class ContactsApi extends BaseApi
+class Contacts extends Base
 {
     public function createContact($groupId, $phone, $fields = [])
     {
