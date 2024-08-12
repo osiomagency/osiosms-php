@@ -5,7 +5,7 @@ namespace OsioSms\Api;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 
-class BaseApi
+class Base
 {
     protected $client;
 
