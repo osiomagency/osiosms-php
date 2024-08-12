@@ -2,6 +2,7 @@
     "name": "osiomagency/osiosms-php",
     "description": "Package PHP pour interagir avec l'API de OsioSMS.",
     "type": "library",
+    "version": "1.0",
     "license": "MIT",
     "authors": [
         {
