@@ -4,7 +4,7 @@ namespace OsioSms\Api;
 
 class Groups extends Base
 {
-    public function createGroup($name)
+    public function create($name)
     {
         $url = "contacts";
         $data = ['name' => $name];
@@ -12,14 +12,14 @@ class Groups extends Base
         return $this->sendRequest('POST', $url, $data);
     }
 
-    public function viewGroup($groupId)
+    public function view($groupId)
     {
         $url = "contacts/{$groupId}/show";
 
         return $this->sendRequest('POST', $url);
     }
 
-    public function updateGroup($groupId, $name)
+    public function update($groupId, $name)
     {
         $url = "contacts/{$groupId}";
         $data = ['name' => $name];
@@ -27,14 +27,14 @@ class Groups extends Base
         return $this->sendRequest('PATCH', $url, $data);
     }
 
-    public function deleteGroup($groupId)
+    public function delete($groupId)
     {
         $url = "contacts/{$groupId}";
 
         return $this->sendRequest('DELETE', $url);
     }
 
-    public function viewAllGroups()
+    public function viewAll()
     {
         $url = "contacts";
 
