@@ -2,7 +2,7 @@
 
 namespace OsioSms\Api;
 
-class Voice extends BaseApi
+class Voice extends Base
 {
     public function send($recipient, $senderId, $language, $gender, $message, $scheduleTime = null)
     {
