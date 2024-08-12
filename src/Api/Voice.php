@@ -4,7 +4,7 @@ namespace OsioSms\Api;
 
 class Voice extends BaseApi
 {
-    public function sendVoiceMessage($recipient, $senderId, $language, $gender, $message, $scheduleTime = null)
+    public function send($recipient, $senderId, $language, $gender, $message, $scheduleTime = null)
     {
         $url = "sms/send";
         $data = [
@@ -23,14 +23,14 @@ class Voice extends BaseApi
         return $this->sendRequest('POST', $url, $data);
     }
 
-    public function viewVoiceMessage($uid)
+    public function view($uid)
     {
         $url = "sms/{$uid}";
 
         return $this->sendRequest('GET', $url);
     }
 
-    public function viewAllVoiceMessages()
+    public function viewAll()
     {
         $url = "sms/";
 
