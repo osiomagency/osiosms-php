@@ -4,7 +4,7 @@ namespace OsioSms\Api;
 
 class Sms extends Base
 {
-    public function sendSms($recipient, $senderId, $type, $message, $scheduleTime = null, $dltTemplateId = null)
+    public function send($recipient, $senderId, $type, $message, $scheduleTime = null, $dltTemplateId = null)
     {
         $url = "sms/send";
         $data = [
@@ -46,14 +46,14 @@ class Sms extends Base
         return $this->sendRequest('POST', $url, $data);
     }
 
-    public function viewSms($uid)
+    public function view($uid)
     {
         $url = "sms/{$uid}";
 
         return $this->sendRequest('GET', $url);
     }
 
-    public function viewAllSms()
+    public function viewAll()
     {
         $url = "sms/";
 
