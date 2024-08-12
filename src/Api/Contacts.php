@@ -4,7 +4,7 @@ namespace OsioSms\Api;
 
 class Contacts extends Base
 {
-    public function createContact($groupId, $phone, $fields = [])
+    public function create($groupId, $phone, $fields = [])
     {
         $url = "contacts/{$groupId}/store";
         $data = array_merge(['PHONE' => $phone], $fields);
@@ -12,14 +12,14 @@ class Contacts extends Base
         return $this->sendRequest('POST', $url, $data);
     }
 
-    public function viewContact($groupId, $uid)
+    public function view($groupId, $uid)
     {
         $url = "contacts/{$groupId}/search/{$uid}";
 
         return $this->sendRequest('POST', $url);
     }
 
-    public function updateContact($groupId, $uid, $phone, $fields = [])
+    public function update($groupId, $uid, $phone, $fields = [])
     {
         $url = "contacts/{$groupId}/update/{$uid}";
         $data = array_merge(['PHONE' => $phone], $fields);
@@ -27,14 +27,14 @@ class Contacts extends Base
         return $this->sendRequest('PATCH', $url, $data);
     }
 
-    public function deleteContact($groupId, $uid)
+    public function delete($groupId, $uid)
     {
         $url = "contacts/{$groupId}/delete/{$uid}";
 
         return $this->sendRequest('DELETE', $url);
     }
 
-    public function viewAllContacts($groupId)
+    public function viewAll($groupId)
     {
         $url = "contacts/{$groupId}/all";
 
