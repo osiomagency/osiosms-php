@@ -1,0 +1,21 @@
+{
+    "name": "osiomagency/osiosms-php",
+    "description": "Package PHP pour interagir avec l'API de OsioSMS.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas BAUD",
+            "email": "nicolas.baud@osiom.fr"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OsioSms\\": "src/"
+        }
+    }
+}
