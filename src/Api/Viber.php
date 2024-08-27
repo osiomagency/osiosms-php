@@ -2,7 +2,7 @@
 
 namespace OsioSms\Api;
 
-class ViberApi extends BaseApi
+class Viber extends BaseApi
 {
     public function send($recipient, $senderId, $message, $mediaUrl = null, $scheduleTime = null)
     {
